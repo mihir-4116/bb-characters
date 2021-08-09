@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: Breaking_Bad;
+  src: url(../../Breaking_Bad.otf);
+}
+:root {
+  --font: Breaking_Bad;
+}
+html,
+body {
+  /* background: #000 url('img/bg.jpg') no-repeat center center/cover; */
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  /* background: linear-gradient( 45deg, #020402, #2725257d); */
+}
+
+@media only screen and (min-width: 500px) {
+  body {
+    background: linear-gradient(45deg, #020402, #272525f0);
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.headerText {
+  font-family: var(--font);
+  color: white;
+  text-align: center;
+  font-size: 5rem;
+}
+
+.btn {
+  display: inline-block;
+  color: #fff;
+  background-color: #3fb573;
+  font-size: 1em;
+  text-align: center;
+  padding: 10px 15px;
+  border: 0;
+  margin: 10px 0;
+}
+
+header {
+  height: 200px;
+}
+
+header img {
+  width: 200px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="text"] {
+  display: block;
+  padding: 10px;
+  font-size: 20px;
+  border: 0;
+  border-radius: 5px;
+  width: 60%;
+  margin: auto;
+  outline: none;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1%;
+}
+.page-link {
+  color: #ffffff !important;
+  background-color: #173911 !important;
+  border: 2px solid black;
+}
+.page-link:focus {
+  box-shadow: 0 0 0 0.2rem rgb(236 236 236 / 47%) !important;
+  transition: all 0.5s;
+  font-size: 15px;
+}
+.page-item {
+  margin: 20px;
+}
+select {
+  font-size: 1.5rem;
+  color: white;
+  background: #00000033;
+  padding: 10px;
+  transition: all 0.5s;
+  flex: 1;
+}
+option {
+  color: white;
+  background: #171716;
+}
+select:hover {
+  cursor: pointer;
+  background-color: darkgreen !important;
+}
+option:hover {
+  box-shadow: 0 0 10px 100px rgb(199, 104, 104) inset;
+}
+.pagination {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2%;
+}
+.btnLogout {
+  padding: 4px;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  background: #a51d49;
+}
+.btnLogout:focus {
+  outline: none;
+}
+.btnLogout:hover {
+  background: #630523;
+  transition: background 0.2s ease-in;
+}
+
+h5 {
+  font-size: 1rem;
+  text-align: center;
+}
+.form-control {
+  color: green;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgb(39 255 0 / 25%);
+}
+.loader {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.loader img {
+  width: 100px;
+  height: 100px;
+}
+.secondary-controls {
+  display: flex;
+  align-items: center;
+  grid-gap: 1vw;
+  padding: 13px;
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    background: #353333 !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .controls {
+    /* flex-wrap: wrap; */
+    grid-gap: 1.4vw;
+    flex-wrap: wrap;
+    flex-flow: column-reverse;
+    margin: 3%;
+  }
+  .controls > h5 {
+    font-size: 16px;
+  }
+  select {
+    font-size: unset;
+    padding: 4px;
+    width: 100%;
+  }
+  .headerText {
+    font-size: 4rem !important;
+  }
+}
+
+@media only screen and (max-width: 315px) {
+  .controls {
+    justify-content: flex-end;
+  }
+}
